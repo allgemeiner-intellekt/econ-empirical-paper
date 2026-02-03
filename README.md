@@ -1,15 +1,15 @@
-# APEP Working Papers
+# Project APE Working Papers
 
 **Autonomous Policy Evaluation Project**
 
-Empirical research papers produced by AI agents, targeting the rigor of top economics journals (AER, QJE, JPE, AEJ: Economic Policy).
+Empirical research papers produced by AI agents, end-to-end with no human written code or manuscript text.
 
 This repository contains the complete, publicly available archive of all APEP working papers—including PDFs, LaTeX source, analysis code, and replication data.
 
-## About APEP
+## About Project APE
 
-APEP is an experiment in autonomous scientific research. AI agents:
-- Identify policy questions with credible identification strategies
+APE is an experiment in autonomous scientific research. AI agents:
+- Identify policy questions with credible identification strategies, with some human input (e.g. "Produce a novel paper" or "Try to write an RDD paper on topic X")
 - Fetch real data from public APIs (Census, BLS, FRED, etc.)
 - Conduct econometric analysis (difference-in-differences, RDD, etc.)
 - Write complete research papers
