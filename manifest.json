@@ -212,43 +212,43 @@
     },
     {
       "paper_id": "apep_0029",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-17",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0029/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0030",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-17",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0030/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0031",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-18",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0031/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0032",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-18",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0032/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0033",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-18",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0033/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0034",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-18",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0034/paper.pdf",
       "promising": false
     },
@@ -261,36 +261,36 @@
     },
     {
       "paper_id": "apep_0036",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-18",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0036/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0037",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-18",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0037/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0038",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-19",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0038/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0039",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-19",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0039/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0040",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-19",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0040/paper.pdf",
       "promising": false
     },
@@ -317,8 +317,8 @@
     },
     {
       "paper_id": "apep_0044",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-21",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0044/paper.pdf",
       "promising": false
     },
@@ -352,8 +352,8 @@
     },
     {
       "paper_id": "apep_0049",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-19",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0049/paper.pdf",
       "promising": false
     },
@@ -380,15 +380,15 @@
     },
     {
       "paper_id": "apep_0053",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-20",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0053/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0054",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-20",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0054/paper.pdf",
       "promising": false
     },
@@ -439,8 +439,8 @@
     },
     {
       "paper_id": "apep_0061",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-01-25",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-01-29",
       "pdf": "papers/apep_0061/paper.pdf",
       "promising": false,
       "is_revision": true,
@@ -673,7 +673,7 @@
     },
     {
       "paper_id": "apep_0091",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-01-30",
       "pdf": "papers/apep_0091/paper.pdf",
       "promising": false,
@@ -684,10 +684,10 @@
     },
     {
       "paper_id": "apep_0092",
-      "decision": "PENDING_REVIEW",
+      "decision": "MINOR REVISION",
       "date": "2026-01-30",
       "pdf": "papers/apep_0092/paper.pdf",
-      "promising": false,
+      "promising": true,
       "is_revision": true,
       "parent_paper_id": "apep_0071",
       "paper_family_id": "apep_0088",
@@ -717,7 +717,7 @@
     },
     {
       "paper_id": "apep_0117",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-01-30",
       "pdf": "papers/apep_0117/paper.pdf",
       "promising": false
@@ -738,7 +738,7 @@
     },
     {
       "paper_id": "apep_0120",
-      "decision": "PENDING_REVIEW",
+      "decision": "REJECT AND RESUBMIT",
       "date": "2026-01-30",
       "pdf": "papers/apep_0120/paper.pdf",
       "promising": false
@@ -777,8 +777,8 @@
     },
     {
       "paper_id": "apep_0125",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-02-01",
+      "decision": "MAJOR REVISION",
+      "date": "2026-01-31",
       "pdf": "papers/apep_0125/paper.pdf",
       "promising": false,
       "is_revision": true,
@@ -788,8 +788,8 @@
     },
     {
       "paper_id": "apep_0126",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-02-01",
+      "decision": "MAJOR REVISION",
+      "date": "2026-01-31",
       "pdf": "papers/apep_0126/paper.pdf",
       "promising": false,
       "is_revision": true,
@@ -799,14 +799,14 @@
     },
     {
       "paper_id": "apep_0127",
-      "decision": "PENDING_REVIEW",
+      "decision": "REJECT AND RESUBMIT",
       "date": "2026-02-01",
       "pdf": "papers/apep_0127/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0128",
-      "decision": "PENDING_REVIEW",
+      "decision": "REJECT AND RESUBMIT",
       "date": "2026-02-01",
       "pdf": "papers/apep_0128/paper.pdf",
       "promising": false
@@ -824,7 +824,7 @@
     },
     {
       "paper_id": "apep_0130",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-01",
       "pdf": "papers/apep_0130/paper.pdf",
       "promising": false,
@@ -835,7 +835,7 @@
     },
     {
       "paper_id": "apep_0132",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-01",
       "pdf": "papers/apep_0132/paper.pdf",
       "promising": false,
@@ -846,7 +846,7 @@
     },
     {
       "paper_id": "apep_0133",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0133/paper.pdf",
       "promising": false,
@@ -857,21 +857,21 @@
     },
     {
       "paper_id": "apep_0134",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0134/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0135",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0135/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0136",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0136/paper.pdf",
       "promising": false,
@@ -882,7 +882,7 @@
     },
     {
       "paper_id": "apep_0137",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0137/paper.pdf",
       "promising": false,
@@ -893,7 +893,7 @@
     },
     {
       "paper_id": "apep_0138",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0138/paper.pdf",
       "promising": false,
@@ -904,7 +904,7 @@
     },
     {
       "paper_id": "apep_0139",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-02",
       "pdf": "papers/apep_0139/paper.pdf",
       "promising": false,
@@ -915,8 +915,8 @@
     },
     {
       "paper_id": "apep_0140",
-      "decision": "PENDING_REVIEW",
-      "date": "2026-02-03",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-02",
       "pdf": "papers/apep_0140/paper.pdf",
       "promising": false,
       "is_revision": true,
@@ -937,19 +937,18 @@
     },
     {
       "paper_id": "apep_0142",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0142/paper.pdf",
       "promising": false,
       "is_revision": true,
       "parent_paper_id": "apep_0130",
       "paper_family_id": "apep_0119",
-      "version": 3,
-      "title": "Do Energy Efficiency Resource Standards Reduce Electricity Consumption? Evidence from Staggered State Adoption"
+      "version": 3
     },
     {
       "paper_id": "apep_0143",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0143/paper.pdf",
       "promising": false,
@@ -960,7 +959,7 @@
     },
     {
       "paper_id": "apep_0144",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0144/paper.pdf",
       "promising": false,
@@ -971,7 +970,7 @@
     },
     {
       "paper_id": "apep_0145",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0145/paper.pdf",
       "promising": false,
@@ -982,7 +981,7 @@
     },
     {
       "paper_id": "apep_0146",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0146/paper.pdf",
       "promising": false,
@@ -993,10 +992,10 @@
     },
     {
       "paper_id": "apep_0147",
-      "decision": "PENDING_REVIEW",
+      "decision": "MINOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0147/paper.pdf",
-      "promising": false,
+      "promising": true,
       "is_revision": true,
       "parent_paper_id": "apep_0129",
       "paper_family_id": "apep_0049",
@@ -1004,7 +1003,7 @@
     },
     {
       "paper_id": "apep_0148",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0148/paper.pdf",
       "promising": false,
@@ -1015,17 +1014,28 @@
     },
     {
       "paper_id": "apep_0149",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0149/paper.pdf",
       "promising": false
     },
     {
       "paper_id": "apep_0150",
-      "decision": "PENDING_REVIEW",
+      "decision": "MAJOR REVISION",
       "date": "2026-02-03",
       "pdf": "papers/apep_0150/paper.pdf",
       "promising": false
+    },
+    {
+      "paper_id": "apep_0151",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-03",
+      "pdf": "papers/apep_0151/paper.pdf",
+      "promising": false,
+      "is_revision": true,
+      "parent_paper_id": "apep_0143",
+      "paper_family_id": "apep_0135",
+      "version": 7
     }
   ]
 }
