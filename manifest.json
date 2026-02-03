@@ -1012,6 +1012,13 @@
       "parent_paper_id": "apep_0146",
       "paper_family_id": "apep_0054",
       "version": 3
+    },
+    {
+      "paper_id": "apep_0149",
+      "decision": "PENDING_REVIEW",
+      "date": "2026-02-03",
+      "pdf": "papers/apep_0149/paper.pdf",
+      "promising": false
     }
   ]
 }
