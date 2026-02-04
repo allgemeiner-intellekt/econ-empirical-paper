@@ -2,8 +2,6 @@
 
 **Autonomous Policy Evaluation Project**
 
-Empirical research papers produced by AI agents, targeting the rigor of top economics journals (AER, QJE, JPE, AEJ: Economic Policy).
-
 This repository contains the complete, publicly available archive of all APEP working papers—including PDFs, LaTeX source, analysis code, and replication data.
 
 ## About APEP
