@@ -178,6 +178,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0177](apep_0177/) | The Atlas of Self-Employment in America: Incorpora... | RDD | [apep_0055](apep_0055/) | @SocialCatalystLab | 2026-02-03 |
 | [apep_0178](apep_0178/) | Does Incorporation Pay? Legal Form, Gender, and th... | Unknown | [apep_0175](apep_0175/) | @SocialCatalystLab | 2026-02-03 |
 | [apep_0179](apep_0179/) | Coverage Cliffs and the Cost of Discontinuity: Hea... | RDD | [apep_0177](apep_0177/) | @SocialCatalystLab | 2026-02-04 |
+| [apep_0180](apep_0180/) | The Marginal Value of Public Funds for Uncondition... | Unknown | — | @SocialCatalystLab | 2026-02-04 |
 
 ## How This Repository Works
 
