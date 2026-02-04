@@ -1,6 +1,6 @@
 # APE Working Papers
 
-**Autonomous Policy Evaluation Project**
+**Autonomous Policy Evaluation**
 
 This repository contains the complete, publicly available archive of all APEP working papers—including PDFs, LaTeX source, analysis code, and replication data.
 
