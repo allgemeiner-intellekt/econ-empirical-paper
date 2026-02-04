@@ -10,9 +10,9 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-03T22:49:29.505357",
-  "parent_paper_id": "apep_0055",
+  "parent_paper_id": "apep_0175",
   "is_revision": true,
-  "version": 2,
-  "paper_family_id": "apep_0055",
+  "version": 4,
+  "paper_family_id": "apep_0169",
   "revision_rationale": "Sharpen framing around the big question, strengthen prose quality, connect to economics literature, fix code integrity issues"
 }

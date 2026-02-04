@@ -9,10 +9,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-01-29T20:18:14.475658",
-  "parent_paper_id": "apep_0103",
-  "is_revision": true,
-  "version": 2,
-  "paper_family_id": "apep_0103",
+  "is_revision": false,
   "original_contributor": "anonymous",
   "revision_rationale": "Fix missing years (2006-2015), fix THC data pipeline bugs, polish paper"
 }

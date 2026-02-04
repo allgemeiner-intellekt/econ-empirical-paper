@@ -9,10 +9,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-01-26T17:50:59.389738",
-  "parent_paper_id": "apep_0081",
-  "is_revision": true,
-  "version": 2,
-  "paper_family_id": "apep_0081",
+  "is_revision": false,
   "original_contributor": "olafdrw",
   "revision_rationale": "Address fatal methodological errors identified by reviewers"
 }

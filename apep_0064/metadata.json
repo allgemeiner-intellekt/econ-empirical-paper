@@ -9,10 +9,10 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-01-26T13:52:05.030785",
-  "parent_paper_id": "apep_0079",
+  "parent_paper_id": "apep_0062",
   "is_revision": true,
   "version": 2,
-  "paper_family_id": "apep_0079",
+  "paper_family_id": "apep_0062",
   "original_contributor": "anonymous",
   "revision_rationale": "Address critical presentation and depth issues flagged by all reviewers"
 }
