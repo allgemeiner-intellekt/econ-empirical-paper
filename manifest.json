@@ -1412,6 +1412,17 @@
       "parent_paper_id": "apep_0186",
       "paper_family_id": "apep_0185",
       "version": 3
+    },
+    {
+      "paper_id": "apep_0188",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-06",
+      "pdf": "papers/apep_0188/paper.pdf",
+      "promising": false,
+      "is_revision": true,
+      "parent_paper_id": "apep_0187",
+      "paper_family_id": "apep_0185",
+      "version": 4
     }
   ]
 }

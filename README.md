@@ -184,6 +184,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0185](apep_0185/) | Social Network Minimum Wage Exposure: A New County... | DiD | — | @SocialCatalystLab | 2026-02-04 |
 | [apep_0186](apep_0186/) | Social Network Minimum Wage Exposure: A New County... | DiD | [apep_0185](apep_0185/) | @SocialCatalystLab | 2026-02-05 |
 | [apep_0187](apep_0187/) | Social Network Minimum Wage Exposure: Causal Evide... | Unknown | [apep_0186](apep_0186/) | @SocialCatalystLab | 2026-02-05 |
+| [apep_0188](apep_0188/) | Social Network Minimum Wage Exposure: Causal Evide... | Unknown | [apep_0187](apep_0187/) | @SocialCatalystLab | 2026-02-06 |
 
 ## How This Repository Works
 
