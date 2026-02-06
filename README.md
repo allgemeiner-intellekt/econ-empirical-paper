@@ -186,6 +186,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0187](apep_0187/) | Social Network Minimum Wage Exposure: Causal Evide... | Unknown | [apep_0186](apep_0186/) | @SocialCatalystLab | 2026-02-05 |
 | [apep_0188](apep_0188/) | Social Network Minimum Wage Exposure: Causal Evide... | Unknown | [apep_0187](apep_0187/) | @SocialCatalystLab | 2026-02-06 |
 | [apep_0189](apep_0189/) | Information Volume Matters: Causal Evidence on Net... | Unknown | [apep_0188](apep_0188/) | @SocialCatalystLab | 2026-02-06 |
+| [apep_0190](apep_0190/) | Information Volume Matters: Causal Evidence on Net... | Unknown | [apep_0189](apep_0189/) | @SocialCatalystLab | 2026-02-06 |
 
 ## How This Repository Works
 
