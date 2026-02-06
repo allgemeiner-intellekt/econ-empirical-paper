@@ -1,0 +1,213 @@
+{
+  "paper_id": "apep_0202",
+  "scan_date": "2026-02-06T21:33:35.480193+00:00",
+  "scan_version": "2.0.0",
+  "model": "openai/gpt-5.2",
+  "overall_verdict": "SUSPICIOUS",
+  "files_scanned": 11,
+  "flags": [
+    {
+      "category": "DATA_PROVENANCE_MISSING",
+      "severity": "HIGH",
+      "file": "01_fetch_data.R",
+      "lines": [
+        236,
+        237,
+        238
+      ],
+      "evidence": "The code explicitly frames the QWI pull as a non-reproducible 'subset for demonstration' (even though the loop is 2012\u20132022 \u00d7 4 quarters). In practice, this script has no guarantee it successfully retrieves the full panel: API failures return NULL silently, the script continues, and if the API returns no data it creates an empty tibble fallback. This creates a serious risk that downstream results are produced from an incomplete/non-standard sample without any hard failure, while the manuscript reports a near-balanced 2012\u20132022 county-quarter panel (135,700 obs).: # Fetch QWI for sample of years (2012-2022) and quarters\n# Note: Full data would take long; fetching subset for demonstration\nyears_to_fetch <- 2012:2022\nquarters <- 1:4",
+      "confidence": 0.8
+    },
+    {
+      "category": "DATA_PROVENANCE_MISSING",
+      "severity": "HIGH",
+      "file": "01_fetch_data.R",
+      "lines": [
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "evidence": "QWI API fetch failures are swallowed (return(NULL) on any non-200, parsing issues, or errors). The main loop then simply omits those state-year-quarter pulls. There is no completeness check (e.g., verifying that all state\u00d7year\u00d7quarter\u00d7industry cells were retrieved) and no stopping condition. This can yield an unobserved, non-randomly missing dataset (e.g., if certain states/years fail more often), undermining reproducibility and potentially biasing estimates.: fetch_qwi <- function(state_fips, year, quarter) {\n  ...\n  tryCatch({\n    resp <- GET(url, timeout(30))\n    if (status_code(resp) == 200) {\n      ...\n      if (length(data) > 1) {\n        ...\n        return(df)\n      }\n    }\n    return(NULL)\n  }, error = function(e) {\n    return(NULL)\n  })\n}",
+      "confidence": 0.85
+    },
+    {
+      "category": "HARD_CODED_RESULTS",
+      "severity": "MEDIUM",
+      "file": "01_fetch_data.R",
+      "lines": [
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "evidence": "State minimum wage histories are manually hard-coded as a long tribble. The manuscript states the MW data are manually curated and verified against DOL/NCSL/Vaghul-Zipperer, so hard-coding per se is not automatically disqualifying. However, from an integrity/reproducibility perspective this is still a single-point-of-failure with no automated provenance capture (no downloaded raw table, no checksum, no reconciliation step, no code shown that applies the federal floor to all states/quarters). Any omissions/mistakes here would directly affect the instrument and exposure measures.: # State minimum wages with effective dates (major changes 2010-2023)\n# This is a curated list of state minimum wage increases\nstate_mw_changes <- tribble(\n  ~state_fips, ~state_abbr, ~date, ~min_wage,\n  # California\n  \"06\", \"CA\", \"2014-07-01\", 9.00,\n  ...\n  # Virginia\n  \"51\", \"VA\", \"2021-05-01\", 9.50,\n  \"51\", \"VA\", \"2022-01-01\", 11.00,\n  \"51\", \"VA\", \"2023-01-01\", 12.00\n)",
+      "confidence": 0.7
+    },
+    {
+      "category": "METHODOLOGY_MISMATCH",
+      "severity": "HIGH",
+      "file": "02b_add_pop_weights.R",
+      "lines": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "evidence": "The manuscript states population weights ('pre-treatment employment averaged over 2012\u20132013') are used to ensure predetermined shares in the shift-share design. The code instead uses mean(emp) over the entire panel (all years/quarters available in analysis_panel.rds). This makes the weights potentially post-treatment and endogenous, directly conflicting with the paper's identification description and potentially biasing the exposure measures/instrument.: county_pop <- panel %>%\n  group_by(county_fips) %>%\n  summarise(pop_proxy = mean(emp, na.rm = TRUE), .groups = \"drop\")",
+      "confidence": 0.9
+    },
+    {
+      "category": "SUSPICIOUS_TRANSFORMS",
+      "severity": "HIGH",
+      "file": "02b_add_pop_weights.R",
+      "lines": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "evidence": "Using the full-sample mean of employment as the population weight can induce mechanical correlation with the outcome and violate the 'predetermined shares' requirement emphasized in the manuscript (Borusyak et al. 2022 shocks-based view). If employment responds to network MW exposure, then the weights embed treatment effects into the exposure construction itself (a form of bad control / post-treatment contamination). This is especially concerning because these weights enter both the endogenous regressor and the instrument construction.: summarise(pop_proxy = mean(emp, na.rm = TRUE), .groups = \"drop\")",
+      "confidence": 0.85
+    },
+    {
+      "category": "DATA_FABRICATION",
+      "severity": "LOW",
+      "file": "00_packages.R",
+      "lines": [
+        60,
+        61
+      ],
+      "evidence": "A global random seed is set on package load. By itself this is not evidence of fabrication. However, because the project uses randomization/permutation inference and uses sample() in robustness checks, setting the seed globally can unintentionally make any other stochastic operations deterministic. This becomes risky if any upstream scripts ever use random generation for anything beyond explicitly-labeled inference (not shown in the provided files).: # Set seed for reproducibility\nset.seed(42)",
+      "confidence": 0.55
+    }
+  ],
+  "file_verdicts": [
+    {
+      "file": "02b_add_pop_weights.R",
+      "verdict": "SUSPICIOUS"
+    },
+    {
+      "file": "01_fetch_data.R",
+      "verdict": "SUSPICIOUS"
+    },
+    {
+      "file": "06_tables.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "00_packages.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "04b_mechanisms.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "04_robustness.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "02_clean_data.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "04c_placebo_shocks.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "03_main_analysis.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "05_figures.R",
+      "verdict": "CLEAN"
+    },
+    {
+      "file": "04d_job_flows.R",
+      "verdict": "CLEAN"
+    }
+  ],
+  "summary": {
+    "verdict": "SUSPICIOUS",
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 4,
+      "MEDIUM": 1,
+      "LOW": 1
+    },
+    "one_liner": "unclear provenance; method mismatch",
+    "executive_summary": "The data acquisition script pulls QWI data in a way that is not reproducible or auditable: it is framed as a \u201csubset for demonstration,\u201d silently drops any state\u2013year\u2013quarter request that errors or returns a non\u2011200 response, and never verifies that the full 2012\u20132022\u00d74 panel was actually retrieved. Separately, the population-weight construction does not match the manuscript\u2019s stated pre-treatment (2012\u20132013) employment weights; it instead uses the full-sample mean of employment, which can mechanically correlate with outcomes and undermines the \u201cpredetermined shares\u201d requirement central to the shift-share design.",
+    "top_issues": [
+      {
+        "category": "DATA_PROVENANCE_MISSING",
+        "severity": "HIGH",
+        "short": "The code explicitly frames the QWI pull as a non-reproduc...",
+        "file": "01_fetch_data.R",
+        "lines": [
+          236,
+          237
+        ],
+        "github_url": "https://github.com/SocialCatalystLab/ape-papers/blob/main/apep_0202/code/01_fetch_data.R#L236-L238"
+      },
+      {
+        "category": "DATA_PROVENANCE_MISSING",
+        "severity": "HIGH",
+        "short": "QWI API fetch failures are swallowed (return(NULL) on any...",
+        "file": "01_fetch_data.R",
+        "lines": [
+          183,
+          184
+        ],
+        "github_url": "https://github.com/SocialCatalystLab/ape-papers/blob/main/apep_0202/code/01_fetch_data.R#L183-L206"
+      },
+      {
+        "category": "METHODOLOGY_MISMATCH",
+        "severity": "HIGH",
+        "short": "The manuscript states population weights ('pre-treatment ...",
+        "file": "02b_add_pop_weights.R",
+        "lines": [
+          34,
+          35
+        ],
+        "github_url": "https://github.com/SocialCatalystLab/ape-papers/blob/main/apep_0202/code/02b_add_pop_weights.R#L34-L38"
+      }
+    ],
+    "full_report_url": "https://github.com/SocialCatalystLab/ape-papers/blob/main/apep_0202/scan_report.json"
+  },
+  "error": null
+}
