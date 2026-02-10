@@ -748,6 +748,17 @@
       "promising": false
     },
     {
+      "paper_id": "apep_0069_v2",
+      "paper_family_id": "apep_0069",
+      "decision": "MINOR REVISION",
+      "date": "2026-02-10",
+      "pdf": "papers/apep_0069/v2/paper.pdf",
+      "promising": true,
+      "is_revision": true,
+      "parent_paper_id": "apep_0069_v2",
+      "version": 3
+    },
+    {
       "paper_id": "apep_0070_v1",
       "decision": "REJECT AND RESUBMIT",
       "date": "2026-02-09",
