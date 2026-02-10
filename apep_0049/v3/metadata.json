@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0147",
+  "paper_id": "apep_0049_v3",
   "title": "Does Federal Transit Funding Improve Local Labor Markets? Evidence from a Population Threshold (v3)",
   "method": "RDD",
   "policy_id": null,
@@ -11,7 +11,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-03T09:20:49.851943",
-  "parent_paper_id": "apep_0129",
+  "parent_paper_id": "apep_0049_v2",
   "is_revision": true,
   "version": 3,
   "paper_family_id": "apep_0049",

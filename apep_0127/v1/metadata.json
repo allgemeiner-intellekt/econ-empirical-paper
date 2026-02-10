@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0127",
+  "paper_id": "apep_0127_v1",
   "title": "Car Ownership, Housing Tenure, and Educational Achievement:\\-Rural Disparities in Swedish Municipalities",
   "method": "RDD",
   "policy_id": null,
@@ -8,5 +8,7 @@
     "anonymous"
   ],
   "authoring_model": "claude-opus-4-5",
-  "published_at": "2026-02-01T09:36:47.425078"
+  "published_at": "2026-02-01T09:36:47.425078",
+  "paper_family_id": "apep_0127",
+  "version": 1
 }

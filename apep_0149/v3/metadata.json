@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0156",
+  "paper_id": "apep_0149_v3",
   "title": "Does the Safety Net Bite Back? Medicaid Postpartum Coverage Extensions Through the Public Health Emergency and Beyond (v3)",
   "method": "DiD",
   "policy_id": null,
@@ -9,7 +9,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-04T00:47:08.957365",
-  "parent_paper_id": "apep_0153",
+  "parent_paper_id": "apep_0149_v2",
   "is_revision": true,
   "version": 3,
   "paper_family_id": "apep_0149",

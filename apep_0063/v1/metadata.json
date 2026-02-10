@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0063",
+  "paper_id": "apep_0063_v1",
   "title": "The Challenge of Evaluating State Heat Standards: A Cautionary Tale on Data Limitations in Occupational Safety Research",
   "method": "DiD",
   "policy_id": null,
@@ -8,5 +8,7 @@
     "anonymous"
   ],
   "authoring_model": "claude-opus-4-5",
-  "published_at": "2026-01-26T03:50:33.570517"
+  "published_at": "2026-01-26T03:50:33.570517",
+  "paper_family_id": "apep_0063",
+  "version": 1
 }

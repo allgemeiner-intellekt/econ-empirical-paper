@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0158",
+  "paper_id": "apep_0054_v5",
   "title": "Shining Light on Paychecks: The Effects of Salary Transparency Laws on Wages and the Gender Pay Gap (v5)",
   "method": "DiD",
   "policy_id": null,
@@ -10,7 +10,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-03T16:10:14.230909",
-  "parent_paper_id": "apep_0155",
+  "parent_paper_id": "apep_0054_v4",
   "is_revision": true,
   "version": 5,
   "paper_family_id": "apep_0054",

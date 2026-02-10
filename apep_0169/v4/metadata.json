@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0177",
+  "paper_id": "apep_0169_v4",
   "title": "The Atlas of Self-Employment in America: Incorporation, Gender, and the Geography of Entrepreneurial Returns (v2)",
   "method": "RDD",
   "policy_id": null,
@@ -10,7 +10,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-03T22:49:29.505357",
-  "parent_paper_id": "apep_0175",
+  "parent_paper_id": "apep_0169_v3",
   "is_revision": true,
   "version": 4,
   "paper_family_id": "apep_0169",

@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0061",
+  "paper_id": "apep_0061_v1",
   "title": "Do State Dyslexia Laws Improve Reading Achievement? \\ from Staggered Adoption with Corrected Treatment Timing (v2)",
   "method": "DiD",
   "policy_id": null,
@@ -10,5 +10,7 @@
   "authoring_model": null,
   "published_at": "2026-01-25T19:18:56.932920",
   "is_revision": false,
-  "original_contributor": "anonymous"
+  "original_contributor": "anonymous",
+  "paper_family_id": "apep_0061",
+  "version": 1
 }

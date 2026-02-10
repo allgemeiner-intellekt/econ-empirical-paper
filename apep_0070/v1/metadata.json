@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0070",
+  "paper_id": "apep_0070_v1",
   "title": "Childcare Mandates and Policy Feedback:\\\\ Spatial Evidence from Swiss Canton Borders",
   "method": "RDD",
   "policy_id": null,
@@ -8,5 +8,7 @@
     "anonymous"
   ],
   "authoring_model": "claude-opus-4-5",
-  "published_at": "2026-01-28T12:30:50.279172"
+  "published_at": "2026-01-28T12:30:50.279172",
+  "paper_family_id": "apep_0070",
+  "version": 1
 }

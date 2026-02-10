@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0173",
+  "paper_id": "apep_0169_v2",
   "title": "The Self-Employment Earnings Penalty Reconsidered: Incorporation Status and the Composition of Entrepreneurship (v2)",
   "method": "Unknown",
   "policy_id": null,
@@ -9,7 +9,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-03T21:32:01.292408",
-  "parent_paper_id": "apep_0169",
+  "parent_paper_id": "apep_0169_v1",
   "is_revision": true,
   "version": 2,
   "paper_family_id": "apep_0169",

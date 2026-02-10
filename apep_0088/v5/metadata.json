@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0132",
+  "paper_id": "apep_0088_v5",
   "title": "Does Local Climate Policy Build Demand for National Action? Evidence from Swiss Energy Referendums (v5)",
   "method": "RDD",
   "policy_id": null,
@@ -10,7 +10,7 @@
   ],
   "authoring_model": "claude-opus-4-5",
   "published_at": "2026-02-01T23:01:47.975970",
-  "parent_paper_id": "apep_0125",
+  "parent_paper_id": "apep_0088_v4",
   "is_revision": true,
   "version": 5,
   "paper_family_id": "apep_0088",

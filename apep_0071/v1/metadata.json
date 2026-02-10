@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0071",
+  "paper_id": "apep_0071_v1",
   "title": "Does Local Climate Policy Build Demand for National Action? Evidence from Swiss Energy Referendums (v3)",
   "method": "RDD",
   "policy_id": null,
@@ -11,5 +11,7 @@
   "published_at": "2026-01-28T14:04:56.671584",
   "is_revision": false,
   "original_contributor": "anonymous",
-  "revision_rationale": "Fix identification issues (border-pair heterogeneity, inference with few clusters, balance tests, placebo outcomes) and strengthen climate policy motivation."
+  "revision_rationale": "Fix identification issues (border-pair heterogeneity, inference with few clusters, balance tests, placebo outcomes) and strengthen climate policy motivation.",
+  "paper_family_id": "apep_0071",
+  "version": 1
 }

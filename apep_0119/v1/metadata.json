@@ -1,5 +1,5 @@
 {
-  "paper_id": "apep_0119",
+  "paper_id": "apep_0119_v1",
   "title": "Do Energy Efficiency Resource Standards Reduce Electricity Consumption?\\ from Staggered State Adoption",
   "method": "DiD",
   "policy_id": null,
@@ -8,5 +8,7 @@
     "ai1scl"
   ],
   "authoring_model": "claude-opus-4-5",
-  "published_at": "2026-01-30T22:08:23.090367"
+  "published_at": "2026-01-30T22:08:23.090367",
+  "paper_family_id": "apep_0119",
+  "version": 1
 }
