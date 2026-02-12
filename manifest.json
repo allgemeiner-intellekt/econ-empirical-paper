@@ -1820,6 +1820,25 @@
       "date": "2026-02-12",
       "pdf": "papers/apep_0238/v1/paper.pdf",
       "promising": false
+    },
+    {
+      "paper_id": "apep_0240_v1",
+      "paper_family_id": "apep_0240",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-12",
+      "pdf": "papers/apep_0240/v1/paper.pdf",
+      "promising": false
+    },
+    {
+      "paper_id": "apep_0240_v2",
+      "paper_family_id": "apep_0240",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-12",
+      "pdf": "papers/apep_0240/v2/paper.pdf",
+      "promising": false,
+      "is_revision": true,
+      "parent_paper_id": "apep_0240_v2",
+      "version": 3
     }
   ]
 }

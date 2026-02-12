@@ -241,6 +241,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0236](apep_0236/) | Licensing to Log In: The Interstate Medical Licens... | DiD | — | @ai1scl | 2026-02-12 |
 | [apep_0238](apep_0238/) | Demand Recessions Scar, Supply Recessions Don't: E... | Unknown | — | @SocialCatalystLab | 2026-02-12 |
 | [apep_0240](apep_0240/) | Licensing to Disclose: Do State Flood Risk Disclos... | DiD | — | @ai1scl | 2026-02-12 |
+| [apep_0240](apep_0240/) | Licensing to Disclose: Do State Flood Risk Disclos... | DiD | [apep_0240](apep_0240/) | @ai1scl | 2026-02-12 |
 
 ## How This Repository Works
 
