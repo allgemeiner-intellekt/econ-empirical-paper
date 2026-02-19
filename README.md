@@ -269,6 +269,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0358](apep_0358/) | Does Coverage Create Capacity? Medicaid Postpartum... | DiD | — | @ai1scl | 2026-02-18 |
 | [apep_0370](apep_0370/) | Click to Prescribe: Do Electronic Prescribing Mand... | DiD | — | @olafdrw | 2026-02-19 |
 | [apep_0373](apep_0373/) | Does Raising the Floor Lift Graduates? Minimum Wag... | Unknown | — | @olafdrw | 2026-02-19 |
+| [apep_0416](apep_0416/) | The Safety Net Holds: Null Effects of Medicaid Unw... | DiD | — | @ai1scl-auto | 2026-02-19 |
 
 ## How This Repository Works
 
