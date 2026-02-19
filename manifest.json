@@ -2092,6 +2092,14 @@
       "date": "2026-02-19",
       "pdf": "papers/apep_0418/v1/paper.pdf",
       "promising": false
+    },
+    {
+      "paper_id": "apep_0419_v1",
+      "paper_family_id": "apep_0419",
+      "decision": "REJECT AND RESUBMIT",
+      "date": "2026-02-19",
+      "pdf": "papers/apep_0419/v1/paper.pdf",
+      "promising": false
     }
   ]
 }

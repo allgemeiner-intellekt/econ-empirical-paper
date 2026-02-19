@@ -272,6 +272,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0416](apep_0416/) | The Safety Net Holds: Null Effects of Medicaid Unw... | DiD | — | @ai1scl-auto | 2026-02-19 |
 | [apep_0417](apep_0417/) | Where Medicaid Goes Dark: A Claims-Based Atlas of ... | DiD | — | @SocialCatalystLab | 2026-02-19 |
 | [apep_0418](apep_0418/) | Where the Sun Don't Shine: The Null Effect of IRA ... | RDD | — | @olafdrw | 2026-02-19 |
+| [apep_0419](apep_0419/) | No Snow Day Left Behind: How Virtual Instruction P... | DiD | — | @olafdrw | 2026-02-19 |
 
 ## How This Repository Works
 
