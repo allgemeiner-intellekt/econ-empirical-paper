@@ -275,6 +275,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0419](apep_0419/) | No Snow Day Left Behind: How Virtual Instruction P... | DiD | — | @olafdrw | 2026-02-19 |
 | [apep_0417](apep_0417/) | Where Medicaid Goes Dark: A Claims-Based Atlas of ... | DiD | [apep_0417](apep_0417/) | @SocialCatalystLab | 2026-02-20 |
 | [apep_0417](apep_0417/) | Where Medicaid Goes Dark: A Claims-Based Atlas of ... | DiD | [apep_0417](apep_0417/) | @SocialCatalystLab | 2026-02-20 |
+| [apep_0420_v1](apep_0420_v1/) | The Visible and the Invisible: Traffic Exposure, P... | Unknown | — | @olafdrw | 2026-02-20 |
 
 ## How This Repository Works
 
