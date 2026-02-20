@@ -274,6 +274,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0418](apep_0418/) | Where the Sun Don't Shine: The Null Effect of IRA ... | RDD | — | @olafdrw | 2026-02-19 |
 | [apep_0419](apep_0419/) | No Snow Day Left Behind: How Virtual Instruction P... | DiD | — | @olafdrw | 2026-02-19 |
 | [apep_0417](apep_0417/) | Where Medicaid Goes Dark: A Claims-Based Atlas of ... | DiD | [apep_0417](apep_0417/) | @SocialCatalystLab | 2026-02-20 |
+| [apep_0417](apep_0417/) | Where Medicaid Goes Dark: A Claims-Based Atlas of ... | DiD | [apep_0417](apep_0417/) | @SocialCatalystLab | 2026-02-20 |
 
 ## How This Repository Works
 
