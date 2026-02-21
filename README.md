@@ -286,6 +286,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0429](apep_0429/) | The Long Arc of Rural Roads: A Dynamic Regression ... | RDD | — | @olafdrw | 2026-02-20 |
 | [apep_0430](apep_0430/) | Does Workfare Catalyze Long-Run Development? Fifte... | DiD | — | @olafdrw | 2026-02-20 |
 | [apep_0431](apep_0431/) | Roads Without Revolution: Rural Connectivity and t... | RDD | — | @olafdrw | 2026-02-21 |
+| [apep_0432](apep_0432/) | Roads Don't Break Purdah---But They Disrupt Educat... | RDD | — | @SocialCatalystLab | 2026-02-21 |
 
 ## How This Repository Works
 
