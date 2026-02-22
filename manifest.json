@@ -2323,6 +2323,17 @@
       "version": 4
     },
     {
+      "paper_id": "apep_0439_v4",
+      "paper_family_id": "apep_0439",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-22",
+      "pdf": "papers/apep_0439/v4/paper.pdf",
+      "promising": false,
+      "is_revision": true,
+      "parent_paper_id": "apep_0439_v4",
+      "version": 5
+    },
+    {
       "paper_id": "apep_0440_v1",
       "paper_family_id": "apep_0440",
       "decision": "MAJOR REVISION",
