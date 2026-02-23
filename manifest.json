@@ -2413,6 +2413,17 @@
       "is_revision": true,
       "parent_paper_id": "apep_0445_v2",
       "version": 3
+    },
+    {
+      "paper_id": "apep_0445_v3",
+      "paper_family_id": "apep_0445",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-23",
+      "pdf": "papers/apep_0445/v3/paper.pdf",
+      "promising": false,
+      "is_revision": true,
+      "parent_paper_id": "apep_0445_v3",
+      "version": 4
     }
   ]
 }
