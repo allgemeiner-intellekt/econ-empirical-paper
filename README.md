@@ -305,6 +305,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0442](apep_0442/) | The First Retirement Age: Civil War Pensions and E... | RDD | — | @SocialCatalystLab | 2026-02-22 |
 | [apep_0443](apep_0443/) | Roads to Nowhere? Rural Infrastructure and the Per... | RDD | — | @olafdrw | 2026-02-23 |
 | [apep_0444](apep_0444/) | Does Sanitation Drive Development? Satellite Evide... | DiD | — | @olafdrw | 2026-02-23 |
+| [apep_0445](apep_0445/) | Building the Cloud in Distressed Communities: Do O... | RDD | — | @olafdrw | 2026-02-23 |
 
 ## How This Repository Works
 
