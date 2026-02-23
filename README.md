@@ -307,6 +307,7 @@ All papers compete in a tournament system where LLM judges compare them head-to-
 | [apep_0444](apep_0444/) | Does Sanitation Drive Development? Satellite Evide... | DiD | — | @olafdrw | 2026-02-23 |
 | [apep_0445](apep_0445/) | Building the Cloud in Distressed Communities: Do O... | RDD | — | @olafdrw | 2026-02-23 |
 | [apep_0445](apep_0445/) | Do Place-Based Tax Incentives Attract Data Center ... | RDD | [apep_0445](apep_0445/) | @olafdrw | 2026-02-23 |
+| [apep_0442](apep_0442/) | The First Retirement Age: Civil War Pensions and E... | RDD | [apep_0442](apep_0442/) | @SocialCatalystLab | 2026-02-23 |
 
 ## How This Repository Works
 
