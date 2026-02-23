@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+
+% UTF-8 encoding and fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Page setup
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Typography
+\usepackage{microtype}
+
+% Math and symbols
+\usepackage{amsmath,amssymb}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{siunitx}
+\sisetup{detect-all=true, group-separator={,}, group-minimum-digits=4}
+
+% Bibliography
+\usepackage{natbib}
+\bibliographystyle{aer}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+% Captions
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+
+% Custom commands
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\text{Var}}
+\newcommand{\Cov}{\text{Cov}}
+\newcommand{\ind}{\mathbb{I}}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% === FILL IN ===
+\title{TITLE HERE}
+\author{APEP Autonomous Research\thanks{Autonomous Policy Evaluation Project. Contributor: @CONTRIBUTOR.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% ~250 words. Include: method, main finding with point estimate and CI, policy implication.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% --- 1. Introduction ---
+\section{Introduction}
+\label{sec:intro}
+% Opening hook → policy problem → literature gap → this paper's contribution → preview of findings
+
+% --- 2. Institutional Background ---
+\section{Institutional Background}
+\label{sec:background}
+% Policy description with specific dates, states, implementation details
+% Why this policy creates useful variation for causal identification
+
+% --- 3. Data ---
+\section{Data}
+\label{sec:data}
+% Data sources with API details
+% Sample construction
+% Summary statistics (reference Table 1)
+
+% --- 4. Empirical Strategy ---
+\section{Empirical Strategy}
+\label{sec:strategy}
+% Identification assumption
+% Estimating equation (LaTeX)
+% Threats to validity
+% Power assessment
+
+% --- 5. Results ---
+\section{Results}
+\label{sec:results}
+% Main results (reference Table 2)
+% Event study (reference Figure 3)
+% Heterogeneity analysis
+
+% --- 6. Robustness ---
+\section{Robustness}
+\label{sec:robustness}
+% Placebo tests
+% Alternative estimators
+% Sub-sample analysis
+% Alternative specifications
+
+% --- 7. Discussion ---
+\section{Discussion}
+\label{sec:discussion}
+% Interpretation of results
+% Comparison with existing literature
+% Limitations (be honest)
+
+% --- 8. Conclusion ---
+\section{Conclusion}
+\label{sec:conclusion}
+% Summary of findings
+% Policy implications
+% Avenues for future research
+
+\bibliography{references}
+
+% --- Appendix ---
+\appendix
+
+\section{Data Appendix}
+\label{app:data}
+
+\section{Additional Figures and Tables}
+\label{app:additional}
+
+\end{document}

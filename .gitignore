@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+.vscode/
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+.Rproj
+*.Rproj
+.env
+.env.local
+
+# LaTeX compilation
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+paper.pdf
+
+# Analysis pipeline outputs
+/data/*.csv
+/data/*.rds
+!/data/.gitkeep
+/figures/*.pdf
+!/figures/.gitkeep
+/tables/*.tex
+!/tables/.gitkeep
+
+# Large files
+*.zip
+*.tar.gz
+*.RData
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.ipynb
