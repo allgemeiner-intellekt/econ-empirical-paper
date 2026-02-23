@@ -2396,14 +2396,6 @@
       "promising": false
     },
     {
-      "paper_id": "apep_0446_v1",
-      "paper_family_id": "apep_0446",
-      "decision": "MAJOR REVISION",
-      "date": "2026-02-23",
-      "pdf": "papers/apep_0446/v1/paper.pdf",
-      "promising": false
-    },
-    {
       "paper_id": "apep_0445_v1",
       "paper_family_id": "apep_0445",
       "decision": "MAJOR REVISION",
@@ -2432,6 +2424,25 @@
       "is_revision": true,
       "parent_paper_id": "apep_0445_v3",
       "version": 4
+    },
+    {
+      "paper_id": "apep_0445_v4",
+      "paper_family_id": "apep_0445",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-23",
+      "pdf": "papers/apep_0445/v4/paper.pdf",
+      "promising": false,
+      "is_revision": true,
+      "parent_paper_id": "apep_0445_v4",
+      "version": 5
+    },
+    {
+      "paper_id": "apep_0446_v1",
+      "paper_family_id": "apep_0446",
+      "decision": "MAJOR REVISION",
+      "date": "2026-02-23",
+      "pdf": "papers/apep_0446/v1/paper.pdf",
+      "promising": false
     }
   ]
 }
