@@ -33,16 +33,45 @@ load_demo <- function(path, wave, birth_vars = character()) {
 }
 
 load_care <- function(path, wave) {
-  read_dta(path) %>%
-    transmute(
-      ID,
-      wave = wave,
-      care_gc_bin = case_when(
-        as.numeric(cf001) == 1 ~ 1,
-        as.numeric(cf001) == 2 ~ 0,
-        TRUE ~ NA_real_
-      )
+  df <- read_dta(path)
+
+  care_gc_bin <- case_when(
+    as.numeric(df$cf001) == 1 ~ 1,
+    as.numeric(df$cf001) == 2 ~ 0,
+    TRUE ~ NA_real_
+  )
+
+  care_parents_bin <- NULL
+  if (wave %in% c(2013, 2015)) {
+    care_parents_bin <- case_when(
+      as.numeric(df$cf004) == 1 ~ 1,
+      as.numeric(df$cf004) == 2 ~ 0,
+      TRUE ~ NA_real_
     )
+  } else if (wave == 2018) {
+    parent_vars <- names(df)[grepl("^cf004_w4_[0-9]+_$", names(df))]
+    stopifnot(length(parent_vars) > 0)
+
+    m <- df[, parent_vars, drop = FALSE]
+    m <- as.data.frame(lapply(m, as.numeric))
+    mat <- as.matrix(m)
+    all_na <- apply(mat, 1, function(x) all(is.na(x)))
+
+    any_yes <- apply(mat, 1, function(x) any(x == 1, na.rm = TRUE))
+    any_no <- apply(mat, 1, function(x) any(x == 2, na.rm = TRUE))
+
+    care_parents_bin <- ifelse(any_yes, 1, ifelse(any_no, 0, NA_real_))
+    care_parents_bin[all_na] <- NA_real_
+  } else {
+    stop("Unsupported wave for parent care: ", wave)
+  }
+
+  tibble(
+    ID = df$ID,
+    wave = wave,
+    care_gc_bin = care_gc_bin,
+    care_parents_bin = care_parents_bin
+  )
 }
 
 load_any_work <- function(path, wave) {
@@ -138,9 +167,23 @@ message("Panel: obs=", nrow(panel), ", ids=", dplyr::n_distinct(panel$ID))
 # ---------------------------
 # [1] Baseline FE replication
 # ---------------------------
-message("\n[1] Baseline FE: any_work ~ care + care*female | ID + wave (cluster ID)")
-m_fe <- feols(any_work ~ care_gc_bin * female_fixed + i(wave) | ID, data = panel, vcov = ~ID)
+message("\n[1] Baseline FE: any_work ~ care_gc_bin + care_gc_bin*female | ID + wave (cluster ID)")
+m_fe <- feols(any_work ~ care_gc_bin + care_gc_bin:female_fixed + i(wave) | ID, data = panel, vcov = ~ID)
 print(coeftable(m_fe))
+
+message("\n[1a] Baseline FE + control: caring for parents (cf004)")
+m_panel_ctrl <- panel %>%
+  mutate(
+    care_parents_miss = as.integer(is.na(care_parents_bin)),
+    care_parents_imp = ifelse(is.na(care_parents_bin), 0, care_parents_bin)
+  )
+m_fe_ctrl <- feols(
+  any_work ~ care_gc_bin + care_gc_bin:female_fixed +
+    care_parents_imp + care_parents_imp:female_fixed + care_parents_miss + i(wave) | ID,
+  data = m_panel_ctrl,
+  vcov = ~ID
+)
+print(coeftable(m_fe_ctrl))
 
 # Also report the female-only coefficient (more directly interpretable).
 panel_w <- panel %>% filter(female_fixed == 1)
@@ -153,6 +196,15 @@ print(coeftable(m_w))
 message("\n[1c] Women-only FE: any_work ~ care | ID + wave (cluster ID), age<=60")
 m_w60 <- feols(any_work ~ care_gc_bin + i(wave) | ID, data = panel_w60, vcov = ~ID)
 print(coeftable(m_w60))
+
+message("\n[1d] Women-only FE + control: caring for parents (cf004), age<=70")
+panel_w_ctrl <- panel_w %>%
+  mutate(
+    care_parents_miss = as.integer(is.na(care_parents_bin)),
+    care_parents_imp = ifelse(is.na(care_parents_bin), 0, care_parents_bin)
+  )
+m_w_ctrl <- feols(any_work ~ care_gc_bin + care_parents_imp + care_parents_miss + i(wave) | ID, data = panel_w_ctrl, vcov = ~ID)
+print(coeftable(m_w_ctrl))
 
 # --------------------------------
 # [2] Lead test for reverse causality
@@ -178,6 +230,16 @@ panel_w_lead <- panel_lead %>% filter(female_fixed == 1)
 message("\n[2b] Women-only lead (placebo): any_work_t ~ care_t + care_{t+1} | ID + wave")
 m_lead_w <- feols(any_work ~ care_gc_bin + care_lead + i(wave) | ID, data = panel_w_lead, vcov = ~ID)
 print(coeftable(m_lead_w))
+
+# Reverse-causality diagnostic in the other direction:
+# Does current work predict future care? (any_work_t -> care_{t+1})
+message("\n[2c] Reverse-causality check: care_{t+1} ~ any_work_t (+female interaction) | ID + wave")
+m_rev <- feols(care_lead ~ any_work + any_work:female_fixed + i(wave) | ID, data = panel_lead, vcov = ~ID)
+print(coeftable(m_rev))
+
+message("\n[2d] Reverse-causality check (women only): care_{t+1} ~ any_work_t | ID + wave")
+m_rev_w <- feols(care_lead ~ any_work + i(wave) | ID, data = panel_w_lead, vcov = ~ID)
+print(coeftable(m_rev_w))
 
 # ----------------------------------------
 # [3] Pretrend check for late starters
@@ -213,3 +275,32 @@ print(coeftable(m_pre))
 message("\n[3b] Late starters main change (2015->2018) vs controls (care2015==0)")
 m_post <- feols(d_work_post ~ treated_late + treated_late:female_fixed + female_fixed, data = late, vcov = "hetero")
 print(coeftable(m_post))
+
+# ----------------------------------------
+# [4] Export compact tables for writing
+# ----------------------------------------
+out_dir <- "analysis/output"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+etable(
+  m_fe,
+  m_fe_ctrl,
+  m_w,
+  m_w60,
+  m_w_ctrl,
+  headers = c("Baseline FE", "FE + Parent Care", "Women FE", "Women FE <=60", "Women FE + Parent Care"),
+  file = file.path(out_dir, "es_table_baseline.txt"),
+  digits = 3
+)
+
+etable(
+  m_lead,
+  m_lead_w,
+  m_rev,
+  m_rev_w,
+  m_pre,
+  m_post,
+  headers = c("Lead (All)", "Lead (Women)", "Reverse (All)", "Reverse (Women)", "Late Pre", "Late Post"),
+  file = file.path(out_dir, "es_table_placebo.txt"),
+  digits = 3
+)

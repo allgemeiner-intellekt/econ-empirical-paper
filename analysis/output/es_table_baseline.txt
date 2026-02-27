@@ -1,0 +1,39 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{5}{c}{any\_work}\\
+                                                 & Baseline FE    & FE + Parent Care & Women FE       & Women FE <=60  & Women FE + Parent Care \\   
+   Model:                                        & (1)            & (2)              & (3)            & (4)            & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   care\_gc\_bin                                 & 0.047$^{***}$  & 0.045$^{***}$    & -0.033$^{**}$  & -0.052$^{**}$  & -0.033$^{**}$\\   
+                                                 & (0.015)        & (0.015)          & (0.015)        & (0.022)        & (0.015)\\   
+   wave $=$ 2015                                 & -0.053$^{***}$ & -0.047$^{***}$   & -0.051$^{***}$ & -0.053$^{***}$ & -0.052$^{***}$\\   
+                                                 & (0.007)        & (0.008)          & (0.011)        & (0.014)        & (0.013)\\   
+   wave $=$ 2018                                 & -0.517$^{***}$ & -0.519$^{***}$   & -0.522$^{***}$ & -0.533$^{***}$ & -0.521$^{***}$\\   
+                                                 & (0.009)        & (0.009)          & (0.013)        & (0.019)        & (0.013)\\   
+   care\_gc\_bin $\times$ female\_fixed          & -0.080$^{***}$ & -0.079$^{***}$   &                &                &   \\   
+                                                 & (0.021)        & (0.021)          &                &                &   \\   
+   care\_parents\_imp                            &                & 0.043            &                &                & -0.017\\   
+                                                 &                & (0.028)          &                &                & (0.025)\\   
+   care\_parents\_miss                           &                & -0.017           &                &                & -0.003\\   
+                                                 &                & (0.015)          &                &                & (0.020)\\   
+   care\_parents\_imp $\times$ female\_fixed     &                & -0.070$^{**}$    &                &                &   \\   
+                                                 &                & (0.032)          &                &                &   \\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ID                                            & Yes            & Yes              & Yes            & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                                  & 13,795         & 13,795           & 7,188          & 3,701          & 7,188\\  
+   R$^2$                                         & 0.68619        & 0.68649          & 0.67750        & 0.67636        & 0.67754\\  
+   Within R$^2$                                  & 0.36902        & 0.36962          & 0.36985        & 0.36345        & 0.36992\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (ID) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+

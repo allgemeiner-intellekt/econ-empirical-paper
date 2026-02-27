@@ -1,0 +1,46 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables: & \multicolumn{2}{c}{any\_work} & \multicolumn{2}{c}{care\_lead} & d\_work\_pre & d\_work\_post\\
+                                            & Lead (All)     & Lead (Women)  & Reverse (All)  & Reverse (Women) & Late Pre       & Late Post \\   
+   Model:                                   & (1)            & (2)           & (3)            & (4)             & (5)            & (6)\\  
+   \midrule
+   \emph{Variables}\\
+   care\_gc\_bin                            & 0.085$^{***}$  & -0.026        &                &                 &                &   \\   
+                                            & (0.029)        & (0.027)       &                &                 &                &   \\   
+   care\_lead                               & 0.066$^{***}$  & 0.025         &                &                 &                &   \\   
+                                            & (0.025)        & (0.033)       &                &                 &                &   \\   
+   wave $=$ 2015                            & -0.040$^{***}$ & -0.033$^{**}$ & -0.059$^{***}$ & -0.053$^{***}$  &                &   \\   
+                                            & (0.009)        & (0.014)       & (0.012)        & (0.016)         &                &   \\   
+   care\_gc\_bin $\times$ female\_fixed     & -0.111$^{***}$ &               &                &                 &                &   \\   
+                                            & (0.040)        &               &                &                 &                &   \\   
+   female\_fixed $\times$ care\_lead        & -0.042         &               &                &                 &                &   \\   
+                                            & (0.041)        &               &                &                 &                &   \\   
+   any\_work                                &                &               & 0.071          & 0.049           &                &   \\   
+                                            &                &               & (0.048)        & (0.038)         &                &   \\   
+   any\_work $\times$ female\_fixed         &                &               & -0.023         &                 &                &   \\   
+                                            &                &               & (0.061)        &                 &                &   \\   
+   Constant                                 &                &               &                &                 & -0.076$^{***}$ & -0.495$^{***}$\\   
+                                            &                &               &                &                 & (0.024)        & (0.033)\\   
+   treated\_late                            &                &               &                &                 & 0.068          & -0.010\\   
+                                            &                &               &                &                 & (0.044)        & (0.061)\\   
+   female\_fixed                            &                &               &                &                 & 0.051          & 0.011\\   
+                                            &                &               &                &                 & (0.033)        & (0.046)\\   
+   treated\_late $\times$ female\_fixed     &                &               &                &                 & -0.027         & -0.039\\   
+                                            &                &               &                &                 & (0.065)        & (0.084)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   ID                                       & Yes            & Yes           & Yes            & Yes             &                & \\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                             & 4,062          & 2,144         & 4,062          & 2,144           & 801            & 801\\  
+   R$^2$                                    & 0.77362        & 0.76344       & 0.69514        & 0.71007         & 0.00688        & 0.00089\\  
+   Within R$^2$                             & 0.01610        & 0.00812       & 0.01433        & 0.01247         &                & \\  
+   \midrule \midrule
+   \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+
