@@ -47,3 +47,22 @@
 - 新识别风险：
   - 论文 IV `hospital`（两小时内可就医便利）未在当前 harmonized Life History 中定位到同义变量，可能影响阶段 5 的 2SLS 复现。
 - 结论：阶段 2 达到计划要求，可进入阶段 3（变量构造与变量字典）。
+
+## 2026-02-27 阶段 3 完成记录
+
+- 验收范围：核心变量、控制变量、机制变量、异质性变量、IV 变量可得性处理与字典化文档。
+- 执行脚本：`src/02_construct_variables.R`。
+- 产出文件：
+  - `output/analysis_dataset.csv`
+  - `output/analysis_dataset.rds`
+  - `output/analysis_dataset_missingness.csv`
+  - `logs/variable_construction_summary.log`
+  - `docs/03_variable_dictionary.md`
+- 关键结果：
+  - 分析数据集规模：`14687 x 53`；
+  - `Risk_Dummy`、`Risk_Ratio`、`childhealth`、控制变量已按统一口径构造；
+  - 机制与异质性变量（`education/health/lntotalasset/depressed/hopeful/fear/under60/edu`）已构造完成；
+  - 论文 IV `hospital` 当前不可得，已保留空列并同步构造非等价代理 `hospital_proxy`（`rachhospital`）供敏感性分析。
+- 新识别风险：
+  - 机制变量 `lntotalasset` 目前采用“个人金融资产口径”近似，可能与论文“总资产口径”存在偏差。
+- 结论：阶段 3 达到计划要求，可进入阶段 4（基准回归复现，表2）。
