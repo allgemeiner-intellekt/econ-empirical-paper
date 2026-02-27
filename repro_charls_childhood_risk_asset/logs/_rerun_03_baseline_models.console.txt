@@ -1,0 +1,6 @@
+Generated at: 2026-02-27 14:58:21 GMT
+Model summary for childhealth:
+(1) Risk_Dummy Logit: beta=-0.0493*, se=(0.0277), stat=-1.781, p=0.0750, n=14687
+(2) Risk_Dummy Logit: beta=-0.0304, se=(0.0283), stat=-1.073, p=0.2832, n=14686
+(3) Risk_Ratio OLS: beta=-0.0011, se=(0.0016), stat=-0.706, p=0.4805, n=14687
+(4) Risk_Ratio OLS: beta=-0.0003, se=(0.0016), stat=-0.173, p=0.8628, n=14686 

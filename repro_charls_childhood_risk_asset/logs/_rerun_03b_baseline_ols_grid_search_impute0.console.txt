@@ -1,0 +1,38 @@
+Generated at: 2026-02-27 15:12:43 GMT
+Pre-asset sample rows (step5): 15599
+Rows in grid output: 896
+Unique scenarios: 448
+Top 5 scenarios:
+   rank_by_target_error                                    scenario_id
+1                     1 denom_5__stock_fund_lend__winsor_top2__impute0
+2                     1 denom_5__stock_fund_lend__winsor_top2__impute0
+3                     2         denom_5__stock_fund_lend__all__impute0
+4                     2         denom_5__stock_fund_lend__all__impute0
+5                     3 denom_5__stock_fund_lend__winsor_top1__impute0
+6                     3 denom_5__stock_fund_lend__winsor_top1__impute0
+7                     4         denom_1__stock_fund_lend__all__impute0
+8                     4         denom_1__stock_fund_lend__all__impute0
+9                     5 denom_1__stock_fund_lend__winsor_top1__impute0
+10                    5 denom_1__stock_fund_lend__winsor_top1__impute0
+   sample_variant       risk_spec model_id coef_fmt   se_fmt  p_fmt     n
+1     winsor_top2 stock_fund_lend      (3)  -0.0019 (0.0017) 0.2516 15598
+2     winsor_top2 stock_fund_lend      (4)  -0.0009 (0.0016) 0.5990 15598
+3             all stock_fund_lend      (3)  -0.0019 (0.0017) 0.2542 15598
+4             all stock_fund_lend      (4)  -0.0009 (0.0017) 0.6019 15598
+5     winsor_top1 stock_fund_lend      (3)  -0.0019 (0.0017) 0.2542 15598
+6     winsor_top1 stock_fund_lend      (4)  -0.0009 (0.0017) 0.6019 15598
+7             all stock_fund_lend      (3)  -0.0019 (0.0017) 0.2578 15598
+8             all stock_fund_lend      (4)  -0.0008 (0.0017) 0.6377 15598
+9     winsor_top1 stock_fund_lend      (3)  -0.0019 (0.0017) 0.2578 15598
+10    winsor_top1 stock_fund_lend      (4)  -0.0008 (0.0017) 0.6377 15598
+   total_abs_error_to_targets
+1                 0.002226622
+2                 0.002226622
+3                 0.002226788
+4                 0.002226788
+5                 0.002226788
+6                 0.002226788
+7                 0.002304452
+8                 0.002304452
+9                 0.002304452
+10                0.002304452 

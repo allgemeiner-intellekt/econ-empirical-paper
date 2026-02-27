@@ -1,0 +1,16 @@
+Generated at: 2026-02-27 14:58:40 GMT
+Candidate count scanned: 5
+Strict direction+F>10 count: 3
+Top candidates:
+                           iv_variable rank_overall first_stage_f_min
+childhealth...1   vaccinated_childhood            1          12.35098
+childhealth...2     hospitalized_3plus            2         138.05679
+childhealth...3        bedbound_health            3         421.36265
+childhealth...4 hospitalized_childhood            4         107.73960
+childhealth...5     miss_school_health            5         207.43106
+                negative_beta_count total_abs_diff_vs_paper
+childhealth...1                   4               0.4029299
+childhealth...2                   4               0.4392770
+childhealth...3                   4               0.5072614
+childhealth...4                   1               0.5817503
+childhealth...5                   0               0.6832629 

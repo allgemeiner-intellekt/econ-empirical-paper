@@ -7,6 +7,7 @@
   - `output/sample_flow.csv`
   - `output/analysis_sample_stage2.csv`
   - `output/analysis_sample_stage2.rds`
+  - `output/analysis_sample_stage2_step5_pre_asset_complete_cases.rds`（S4 后、资产 complete-case 前的中间样本，用于缺失处理敏感性）
   - `logs/sample_build_summary.log`
 - 复现问题探索日志：
   - `logs/sample_size_sensitivity.log`

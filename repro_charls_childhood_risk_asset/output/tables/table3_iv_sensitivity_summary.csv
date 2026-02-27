@@ -1,0 +1,5 @@
+"iv_spec_id","iv_vars","iv_label","total_abs_diff_vs_paper","min_first_stage_f","negative_beta_count","all_four_beta_negative","all_four_p_lt_0_1","rank_by_total_abs_diff"
+"vaccinated_plus_hosp3","vaccinated_childhood+hospitalized_3plus","multi-IV: vaccinated + hospitalized_3plus",0.336781472726081,76.4842694401,4,TRUE,TRUE,1
+"vaccinated_childhood","vaccinated_childhood","proxy: childhood vaccination (closest to access)",0.40292986496648,12.3509766128033,4,TRUE,FALSE,2
+"vaccinated_plus_hosp3_plus_bed","vaccinated_childhood+hospitalized_3plus+bedbound_health","multi-IV: vaccinated + hospitalized_3plus + bedbound",0.464196866361055,167.344998373748,4,TRUE,FALSE,3
+"hospital_proxy","hospital_proxy","proxy: childhood hospitalization (NOT paper IV)",0.581750290892016,107.739601577865,1,FALSE,FALSE,4

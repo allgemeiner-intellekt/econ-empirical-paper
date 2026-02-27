@@ -1,0 +1,8 @@
+Generated at: 2026-02-27 14:58:35 GMT
+Official IV available models: 0/4
+Proxy IV available models: 4/4
+Proxy IV model summary:
+(1) Risk_Dummy: beta=0.0493, se=0.0323, stat=1.526, p=0.1270, first_stage_F=107.74
+(2) Risk_Dummy: beta=0.0029, se=0.0302, stat=0.097, p=0.9230, first_stage_F=112.99
+(3) Risk_Ratio: beta=0.0138, se=0.0196, stat=0.705, p=0.4811, first_stage_F=107.74
+(4) Risk_Ratio: beta=-0.0113, se=0.0188, stat=-0.603, p=0.5466, first_stage_F=112.99 

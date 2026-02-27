@@ -1,0 +1,13 @@
+Generated at: 2026-02-27 15:12:47 GMT
+IV specs evaluated: 4
+Summary ranking (top 4):
+# A tibble: 4 × 7
+  rank_by_total_abs_diff iv_spec_id               iv_vars total_abs_diff_vs_pa…¹
+                   <int> <chr>                    <chr>                    <dbl>
+1                      1 vaccinated_plus_hosp3    vaccin…                  0.337
+2                      2 vaccinated_childhood     vaccin…                  0.403
+3                      3 vaccinated_plus_hosp3_p… vaccin…                  0.464
+4                      4 hospital_proxy           hospit…                  0.582
+# ℹ abbreviated name: ¹​total_abs_diff_vs_paper
+# ℹ 3 more variables: min_first_stage_f <dbl>, all_four_beta_negative <lgl>,
+#   all_four_p_lt_0_1 <lgl> 

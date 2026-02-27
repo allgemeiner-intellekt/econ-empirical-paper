@@ -1,0 +1,37 @@
+Generated at: 2026-02-27 14:58:34 GMT
+Rows in grid output: 896
+Unique scenarios: 448
+Top 5 scenarios:
+   rank_by_target_error                                        scenario_id
+1                     1 denom_21__stock_fund_lend__winsor_top1__unweighted
+2                     1 denom_21__stock_fund_lend__winsor_top1__unweighted
+3                     2         denom_21__stock_fund_lend__all__unweighted
+4                     2         denom_21__stock_fund_lend__all__unweighted
+5                     3 denom_21__stock_fund_lend__winsor_top2__unweighted
+6                     3 denom_21__stock_fund_lend__winsor_top2__unweighted
+7                     4  denom_5__stock_fund_lend__winsor_top1__unweighted
+8                     4  denom_5__stock_fund_lend__winsor_top1__unweighted
+9                     5          denom_5__stock_fund_lend__all__unweighted
+10                    5          denom_5__stock_fund_lend__all__unweighted
+   sample_variant       risk_spec model_id coef_fmt   se_fmt  p_fmt     n
+1     winsor_top1 stock_fund_lend      (3)  -0.0015 (0.0017) 0.3634 14686
+2     winsor_top1 stock_fund_lend      (4)  -0.0006 (0.0016) 0.7293 14686
+3             all stock_fund_lend      (3)  -0.0015 (0.0017) 0.3641 14686
+4             all stock_fund_lend      (4)  -0.0006 (0.0016) 0.7301 14686
+5     winsor_top2 stock_fund_lend      (3)  -0.0015 (0.0016) 0.3623 14686
+6     winsor_top2 stock_fund_lend      (4)  -0.0006 (0.0016) 0.7301 14686
+7     winsor_top1 stock_fund_lend      (3)  -0.0015 (0.0017) 0.3875 14686
+8     winsor_top1 stock_fund_lend      (4)  -0.0005 (0.0017) 0.7670 14686
+9             all stock_fund_lend      (3)  -0.0015 (0.0017) 0.3875 14686
+10            all stock_fund_lend      (4)  -0.0005 (0.0017) 0.7671 14686
+   total_abs_error_to_targets
+1                 0.002926273
+2                 0.002926273
+3                 0.002929248
+4                 0.002929248
+5                 0.002945362
+6                 0.002945362
+7                 0.003023087
+8                 0.003023087
+9                 0.003023292
+10                0.003023292 

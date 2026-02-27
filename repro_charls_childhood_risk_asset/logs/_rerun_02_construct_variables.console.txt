@@ -1,0 +1,8 @@
+Generated at: 2026-02-27 14:58:20 GMT
+Rows: 14687
+Columns: 53
+Risk_Dummy mean: 0.0978
+Risk_Ratio mean: 0.0543
+Childhealth mean: 2.6579
+Hospital available count: 0
+Hospital proxy available count: 14617 

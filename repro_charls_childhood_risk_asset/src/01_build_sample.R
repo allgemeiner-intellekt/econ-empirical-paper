@@ -117,6 +117,13 @@ sample_step5 <- sample_step4 %>%
     !is.na(hukou_raw),
     !is.na(marriage_raw)
   )
+
+# Save intermediate sample before requiring complete asset components.
+# This is useful for sensitivity checks on missing-asset handling (e.g., NA -> 0).
+saveRDS(
+  sample_step5,
+  file.path(output_dir, "analysis_sample_stage2_step5_pre_asset_complete_cases.rds")
+)
 sample_step6 <- sample_step5 %>% filter(complete.cases(across(all_of(financial_components))))
 
 analysis_sample <- sample_step6 %>%

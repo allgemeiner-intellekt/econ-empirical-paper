@@ -1,0 +1,29 @@
+Generated at: 2026-02-27 14:58:17 GMT
+
+[1] 2018 wave module readability
+Total 2018 .dta files: 14
+Readable files: 14
+Unreadable files: 0
+Files with ID key: 12
+Files without ID key: 2
+
+[1.1] Household-level files (without ID) key quality
+Household_Income.dta: nrow=11544, householdID_missing=0, householdID_duplicated=0 | Housing.dta: nrow=11535, householdID_missing=0, householdID_duplicated=0
+
+[2] Life History file quality
+Life History file: data/H_CHARLS_LH_a.dta
+Rows: 20656
+Columns: 351
+ID missing: 0
+ID unique: 20656
+
+[3] 2018-LH ID linkage
+2018 Sample_Infor unique ID: 20813
+Life History unique ID: 20656
+Overlap ID count: 18298
+LH covered by 2018 Sample_Infor: 88.58%
+2018 Sample_Infor covered by LH: 87.92%
+
+[4] Key variable availability in Life History
+Available vars: ID, householdID, communityID, rachchlt, ramischlth, rachbedhlth, rachhospital, rachhospital3, rachvaccine, ramomoccup_c, radadoccup_c
+Missing vars: familystarved, nofood 

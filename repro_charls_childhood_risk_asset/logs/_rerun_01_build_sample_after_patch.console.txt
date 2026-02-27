@@ -1,0 +1,5 @@
+Generated at: 2026-02-27 15:12:29 GMT
+Final sample size: 14687
+Risk_Dummy mean (share with risk assets): 0.0978
+Risk_Ratio mean: 0.0543
+Risk_Ratio p99: 0.9950 

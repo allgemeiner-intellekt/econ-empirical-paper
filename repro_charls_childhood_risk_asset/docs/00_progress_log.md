@@ -134,3 +134,32 @@
   - 阶段 5：`rachhospital` 作为可执行 IV 时结果方向不稳；改用其他候选（如 `rachvaccine/rachhospital3/rachbedhlth`）可获得全负方向，但量级与论文差异仍大；
   - 联动解释：相关关系（负向）较稳健，因果识别对 IV 设定高度敏感。
 - 结论：阶段 4/5 已完成“尽可能复现”的增强复核，并形成可复跑脚本与报告口径。
+
+## 2026-02-27 阶段 4-5 二次复核补充记录（缺失处理 + 多 IV 对照）
+
+复核动机：用户反馈阶段 4/5 结果仍未能与论文在“理论预期（负向）+显著性”层面充分一致，因此从数据清洗假设与 IV 设定两条路径补充敏感性检验，并将可复跑脚本纳入工程。
+
+1) 阶段 4：资产缺失处理（NA→0，impute0）
+- 新增中间样本输出（阶段 2，S4 后、complete-case 前）：
+  - `output/analysis_sample_stage2_step5_pre_asset_complete_cases.rds`
+- 新增脚本：
+  - `src/03b_baseline_ols_grid_search_impute0.R`
+- 新增输出：
+  - `output/tables/table2_ols_grid_search_impute0.csv`
+  - `output/tables/table2_ols_grid_top10_impute0.csv`
+- 关键结论：
+  - 即便允许资产缺失按 0 处理、并在扩大样本上重跑 448 场景网格，`Risk_Ratio` 的 OLS 仍无法恢复论文表 2 的显著性（Top 1 场景 (3) 约 `-0.0019`，`p≈0.25`）。
+
+2) 阶段 5：替代/多 IV 的 2SLS 对照（受限识别）
+- 新增脚本：
+  - `src/04b_iv_sensitivity_alternative_ivs.R`
+- 新增输出：
+  - `output/tables/table3_iv_sensitivity.csv`
+  - `output/tables/table3_iv_sensitivity_summary.csv`
+- 关键结论：
+  - 单 IV 中 `vaccinated_childhood` 在方向上与论文一致（前三列显著为负），但量级偏大且第 (4) 列不显著；
+  - 多 IV 设定 `vaccinated_childhood + hospitalized_3plus` 可使四列均为负且 `p<0.1`，并在若干衡量准则下更接近论文表 3，但该设定不等价于论文单一 IV（`hospital`），仅作为敏感性分析。
+
+3) 结论与下一步
+- 阶段 4：负向相关（参与概率）可稳定复现；比例效应的显著性在可得数据与可观察清洗规则下仍难以恢复。
+- 阶段 5：论文 IV 字段缺失仍是核心瓶颈；在当前 harmonized 数据约束下可提供“方向一致”的替代设定与对照表，但不应当等价宣称已复现论文的因果识别结论。
