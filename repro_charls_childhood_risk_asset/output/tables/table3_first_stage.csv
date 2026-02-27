@@ -1,0 +1,5 @@
+"model_id","dependent_variable","iv_variable","iv_label","first_stage_n","first_stage_coef_iv","first_stage_f","first_stage_p"
+"(1)","Risk_Dummy","hospital_proxy","proxy_iv_childhood_hospitalization",14617,0.58859178884375,107.739601577865,3.74846765489783e-25
+"(2)","Risk_Dummy","hospital_proxy","proxy_iv_childhood_hospitalization",14616,0.603506778580328,112.986133941968,2.71073231493994e-26
+"(3)","Risk_Ratio","hospital_proxy","proxy_iv_childhood_hospitalization",14617,0.58859178884375,107.739601577865,3.74846765489783e-25
+"(4)","Risk_Ratio","hospital_proxy","proxy_iv_childhood_hospitalization",14616,0.603506778580328,112.986133941968,2.71073231493994e-26

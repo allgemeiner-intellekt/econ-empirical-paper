@@ -1,0 +1,5 @@
+"model_id","dependent_variable","model_type","controls","iv_variable","iv_label","n","estimate","robust_se","statistic","p_value","stars","first_stage_f","first_stage_p","first_stage_coef_iv"
+"(1)","Risk_Dummy","2SLS","No","hospital_proxy","proxy_iv_childhood_hospitalization",14617,0.049332284788698,0.0323249564707721,1.52613615530477,0.126975959479815,"",107.739601577865,3.74846765489783e-25,0.58859178884375
+"(2)","Risk_Dummy","2SLS","Yes","hospital_proxy","proxy_iv_childhood_hospitalization",14616,0.00292219715393835,0.0302492926916689,0.0966038176073837,0.923041024665493,"",112.986133941968,2.71073231493994e-26,0.603506778580328
+"(3)","Risk_Ratio","2SLS","No","hospital_proxy","proxy_iv_childhood_hospitalization",14617,0.0138171310815442,0.0196096771322615,0.704607780554047,0.481054355179044,"",107.739601577865,3.74846765489783e-25,0.58859178884375
+"(4)","Risk_Ratio","2SLS","Yes","hospital_proxy","proxy_iv_childhood_hospitalization",14616,-0.0113213221321643,0.0187791200517916,-0.602867551884266,0.546596803531892,"",112.986133941968,2.71073231493994e-26,0.603506778580328
