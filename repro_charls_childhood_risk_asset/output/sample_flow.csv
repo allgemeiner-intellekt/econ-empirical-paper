@@ -1,0 +1,8 @@
+"step","n","dropped","drop_rate_from_prev_pct","keep_rate_from_start_pct"
+"S0_start_2018_sample_infor",20813,0,0,100
+"S1_keep_crosssection_1_and_alive",17970,2843,13.66,86.34
+"S2_keep_age_ge_45",17559,411,2.29,84.37
+"S3_keep_childhealth_nonmissing_1to5",15607,1952,11.12,74.99
+"S4_keep_core_controls_nonmissing",15599,8,0.05,74.95
+"S5_keep_financial_components_observed",14687,912,5.85,70.57
+"S6_drop_abnormal_risk_ratio_outside_0_1",14687,0,0,70.57

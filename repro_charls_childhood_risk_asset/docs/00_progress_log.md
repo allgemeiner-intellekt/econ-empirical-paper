@@ -26,3 +26,24 @@
   - 2018 与 Life History 的 `ID` 交集为 `18298`（存在样本收缩）；
   - `familystarved`、`nofood` 变量不可得（需待原始模块后补跑阶段 6 子任务）。
 - 结论：阶段 1 达到计划要求，可进入阶段 2（样本构建与清洗规则落地）。
+
+## 2026-02-27 阶段 2 完成记录
+
+- 验收范围：样本构建、清洗规则落地、样本流失统计与阶段文档输出。
+- 执行脚本：`src/01_build_sample.R`。
+- 产出文件：
+  - `output/sample_flow.csv`
+  - `output/analysis_sample_stage2.csv`
+  - `output/analysis_sample_stage2.rds`
+  - `logs/sample_build_summary.log`
+  - `logs/sample_size_sensitivity.log`
+  - `logs/iv_variable_precheck.log`
+  - `docs/02_sample_construction.md`
+- 关键结果：
+  - 最终分析样本量：`14687`；
+  - 风险资产持有率（`Risk_Dummy` 均值）：`9.78%`；
+  - 样本流失中最大环节为“缺失童年健康信息”（`-1952`）；
+  - 论文样本量 `14019` 尚未完全对齐（差 `668`），已完成敏感性探索并记录。
+- 新识别风险：
+  - 论文 IV `hospital`（两小时内可就医便利）未在当前 harmonized Life History 中定位到同义变量，可能影响阶段 5 的 2SLS 复现。
+- 结论：阶段 2 达到计划要求，可进入阶段 3（变量构造与变量字典）。
