@@ -5,8 +5,8 @@
   - 已确认该 harmonized Life History 文件不包含 `familystarved`、`nofood`（对应原始问卷 `C4`、`C3_a`），相关原始数据仍在申请中。
   - 执行策略：先完成不依赖上述缺口变量的阶段；阶段 6 中“童年饥饿/家庭贫困直接控制”子任务延期，待数据获批后补跑并更新文档。
 
-- [ ] 阶段 0：建立复现工程骨架。目标：在根目录新建文件夹 `repro_charls_childhood_risk_asset/`，统一放置代码、结果、日志和文档；产物：`README.md`、`src/`、`output/`、`logs/`、`docs/`、`config/` 基础结构。
-- [ ] 阶段 1：数据清点与可用性核验。目标：核验 `CHARLS 2018` 与 `2014 Life History` 是否齐全、字段是否可读、主键是否可联结；产物：`docs/01_data_inventory.md`（含文件清单、关键字段、缺失风险、替代方案）。
+- [x] 阶段 0：建立复现工程骨架。目标：在根目录新建文件夹 `repro_charls_childhood_risk_asset/`，统一放置代码、结果、日志和文档；产物：`README.md`、`src/`、`output/`、`logs/`、`docs/`、`config/` 基础结构。（完成日期：2026-02-27）
+- [x] 阶段 1：数据清点与可用性核验。目标：核验 `CHARLS 2018` 与 `2014 Life History` 是否齐全、字段是否可读、主键是否可联结；产物：`docs/01_data_inventory.md`（含文件清单、关键字段、缺失风险、替代方案）。（完成日期：2026-02-27）
 - [ ] 阶段 2：样本构建与清洗规则落地。目标：按论文口径完成合并、去缺失、去异常，形成分析样本；产物：`src/01_build_sample.*`、`output/sample_flow.csv`、`docs/02_sample_construction.md`（含最终样本量与每步筛选损失）。
 - [ ] 阶段 3：变量构造。目标：完成 `Risk_Dummy`、`Risk_Ratio`、`childhealth`、控制变量、IV(`hospital`)、机制变量、异质性变量构造；产物：`src/02_construct_variables.*`、`output/analysis_dataset.*`、`docs/03_variable_dictionary.md`。
 - [ ] 阶段 4：基准回归复现（表2）。目标：`Risk_Dummy` 用 Logit，`Risk_Ratio` 用 OLS，使用稳健标准误；产物：`src/03_baseline_models.*`、`output/tables/table2_reproduced.*`、`docs/04_baseline_results.md`（与论文系数方向和量级对照）。

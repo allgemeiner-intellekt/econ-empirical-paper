@@ -1,58 +1,74 @@
-## 阶段 1：数据清点与可用性核验（更新于 2026-02-27）
+## 阶段 1：数据清点与可用性核验（完成于 2026-02-27）
 
-## 1. 文件可用性
+## 1. 核验范围与方法
 
-- 已核验文件：`data/H_CHARLS_LH_a.dta`
-- 文件格式：Stata 117，可正常读取
-- 数据规模：`20656` 行，`351` 列
+- 核验对象：`data/temp_2018/*.dta` 与 `data/H_CHARLS_LH_a.dta`。
+- 自动化脚本：`src/00_data_inventory_check.R`。
+- 输出产物：
+  - `logs/data_inventory_summary.log`
+  - `output/data_inventory_2018_modules.csv`
+  - `output/data_inventory_2018_household_keys.csv`
+  - `output/data_inventory_lh_keyvars.csv`
 
-## 2. 主键与联结可行性
+## 2. 2018 数据可用性结论
 
-- `ID`：无缺失、无重复（`20656/20656` 唯一）
-- 可用于与 2018 主样本按个体 ID 进行一对一联结
-- 其他辅助键：`householdID`、`communityID`
+- 2018 波次模块文件总数：`14`。
+- 可读取文件：`14`，不可读取文件：`0`。
+- 含个体键 `ID` 的模块：`12`。
+- 不含 `ID` 的模块：`2`（`Household_Income.dta`、`Housing.dta`）。
 
-## 3. 与研究问题相关的可用变量（Life History）
+不含 `ID` 的两个家庭层文件已进一步核验：
+- `householdID` 无缺失、无重复。
+- 可通过 `householdID` 稳定并入个体样本（按家庭键一对多扩展到个体）。
 
-- 童年健康核心：
-  - `rachchlt`：15 岁前相对健康自评（5 档）
-- 童年健康经历：
-  - `ramischlth`：15 岁前因健康停学
-  - `rachbedhlth`：15 岁前因健康卧床
-  - `rachhospital`：15 岁前因健康住院
-  - `rachhospital3`：15 岁前住院 3 次
-  - `rachvaccine`：童年疫苗接种
-- 童年家庭背景代理：
-  - `ramomoccup_c`：女性监护人职业（17 岁前）
-  - `radadoccup_c`：男性监护人职业（17 岁前）
+## 3. Life History 文件可用性结论
 
-## 4. 已确认缺口
+- 文件：`data/H_CHARLS_LH_a.dta`
+- 数据规模：`20656` 行，`351` 列。
+- 主键质量：
+  - `ID` 缺失：`0`
+  - `ID` 唯一值：`20656`
+  - 结论：Life History 可作为个体层一对一联结源。
 
-- 当前文件不含以下计划变量：
-  - `familystarved`
-  - `nofood`
-- 检查方式：
-  - 变量名检索：未命中
-  - 变量标签检索（`food/starv/famine/hunger`）：未命中
-- 原因判断：
-  - `H_CHARLS_LH_a.dta` 为 harmonized 子集，未包含原始问卷中的全部童年贫困/饥饿题目。
+## 4. 2018 与 Life History 联结可行性
 
-## 5. 对执行计划的影响
+基于 `data/temp_2018/Sample_Infor.dta` 与 `data/H_CHARLS_LH_a.dta` 的 `ID`：
+- 2018 唯一 `ID`：`20813`
+- Life History 唯一 `ID`：`20656`
+- 交集 `ID`：`18298`
+- 覆盖率：
+  - Life History 被 2018 覆盖 `88.58%`
+  - 2018 被 Life History 覆盖 `87.92%`
 
-- 可先完成：
-  - 阶段 0-5（样本、变量、基准回归、IV）
-  - 阶段 7-10（机制、异质性、汇总与交付）
-- 需延期补跑：
-  - 阶段 6 中“加入 `familystarved`、`nofood`、童年家庭经济直接指标”的稳健性列
-- 临时替代（弱代理）：
-  - 可用 `ramomoccup_c`、`radadoccup_c` 作为童年 SES 代理控制，但不能等价替代饥饿变量。
+结论：可联结，但不是全覆盖。后续阶段需在样本流程中显式记录“2018-LH 交集筛选”导致的样本损失。
 
-## 6. 数据到位后的补跑清单
+## 5. 关键变量可得性（Life History）
 
-- 补充导入 2014 Life History 原始相关模块（含 `C3_a`、`C4` 对应变量）
-- 更新 `src/02_construct_variables.*` 与 `src/05_robustness.*`
-- 重生成并比对：
-  - `output/tables/table_robustness.*`
-  - `docs/06_robustness.md`
-  - `docs/09_reproduction_report.md`
-  - `docs/10_limitations_and_gaps.md`
+已可得：
+- `rachchlt`（童年健康核心变量）
+- `ramischlth`、`rachbedhlth`、`rachhospital`、`rachhospital3`、`rachvaccine`
+- `ramomoccup_c`、`radadoccup_c`
+
+当前缺失：
+- `familystarved`
+- `nofood`
+
+## 6. 对复现阶段的影响与解决方案
+
+影响 1：稳健性子任务变量缺口。
+- 问题：`familystarved/nofood` 在 harmonized Life History 中不可得。
+- 影响阶段：阶段 6 的“童年饥饿/家庭贫困直接控制”列无法立即复现。
+- 解决方案：
+  - 当前按计划先推进阶段 0-5、7-10。
+  - 待原始 2014 Life History 相关模块数据获批后补跑阶段 6 缺失子任务，并回写阶段 9-10 汇总文档。
+
+影响 2：联结覆盖非 100%。
+- 问题：2018 与 Life History `ID` 交集为 `18298`，存在样本收缩。
+- 解决方案：
+  - 在阶段 2 输出 `sample_flow.csv`，单独列出“因缺失 LH 信息被剔除”的数量与比例。
+  - 主结果与稳健性均统一在交集样本口径下运行，避免样本口径漂移。
+
+## 7. 阶段 1 验收结论
+
+- 已满足阶段 1 目标：文件齐全性、字段可读性、主键联结性、缺失风险与替代方案均已形成文档化结论。
+- 阶段 1 状态：完成，可进入阶段 2（样本构建与清洗规则落地）。

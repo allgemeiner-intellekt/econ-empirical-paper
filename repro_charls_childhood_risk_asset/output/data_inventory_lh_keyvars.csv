@@ -1,0 +1,14 @@
+"variable","exists"
+"ID",TRUE
+"householdID",TRUE
+"communityID",TRUE
+"rachchlt",TRUE
+"ramischlth",TRUE
+"rachbedhlth",TRUE
+"rachhospital",TRUE
+"rachhospital3",TRUE
+"rachvaccine",TRUE
+"ramomoccup_c",TRUE
+"radadoccup_c",TRUE
+"familystarved",FALSE
+"nofood",FALSE

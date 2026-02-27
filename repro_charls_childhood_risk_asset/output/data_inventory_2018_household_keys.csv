@@ -1,0 +1,3 @@
+"file","nrow","householdID_missing","householdID_unique","householdID_duplicated"
+"Household_Income.dta",11544,0,11544,0
+"Housing.dta",11535,0,11535,0

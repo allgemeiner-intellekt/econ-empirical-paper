@@ -1,0 +1,15 @@
+"file","path","readable","nrow","ncol","has_ID","has_householdID","has_communityID","id_missing","id_unique","id_duplicated"
+"Cognition.dta","data/temp_2018/Cognition.dta",TRUE,19744,219,TRUE,TRUE,TRUE,0,19744,0
+"Demographic_Background.dta","data/temp_2018/Demographic_Background.dta",TRUE,19816,110,TRUE,TRUE,TRUE,0,19816,0
+"Family_Information.dta","data/temp_2018/Family_Information.dta",TRUE,11628,1539,TRUE,TRUE,TRUE,0,11628,0
+"Family_Transfer.dta","data/temp_2018/Family_Transfer.dta",TRUE,11568,1120,TRUE,TRUE,TRUE,0,11568,0
+"Health_Care_and_Insurance.dta","data/temp_2018/Health_Care_and_Insurance.dta",TRUE,19776,277,TRUE,TRUE,TRUE,0,19776,0
+"Health_Status_and_Functioning.dta","data/temp_2018/Health_Status_and_Functioning.dta",TRUE,19752,896,TRUE,TRUE,TRUE,0,19752,0
+"Household_Income.dta","data/temp_2018/Household_Income.dta",TRUE,11544,576,FALSE,TRUE,TRUE,,,
+"Housing.dta","data/temp_2018/Housing.dta",TRUE,11535,1387,FALSE,TRUE,TRUE,,,
+"Individual_Income.dta","data/temp_2018/Individual_Income.dta",TRUE,19755,124,TRUE,TRUE,TRUE,0,19755,0
+"Insider.dta","data/temp_2018/Insider.dta",TRUE,11011,70,TRUE,TRUE,TRUE,0,11011,0
+"Pension.dta","data/temp_2018/Pension.dta",TRUE,19718,395,TRUE,TRUE,TRUE,0,19718,0
+"Sample_Infor.dta","data/temp_2018/Sample_Infor.dta",TRUE,20813,8,TRUE,TRUE,TRUE,0,20813,0
+"Weights.dta","data/temp_2018/Weights.dta",TRUE,17970,8,TRUE,TRUE,TRUE,0,17970,0
+"Work_Retirement.dta","data/temp_2018/Work_Retirement.dta",TRUE,19725,321,TRUE,TRUE,TRUE,0,19725,0
