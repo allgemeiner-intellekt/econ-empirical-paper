@@ -1,5 +1,10 @@
 ## CHARLS 论文复现分阶段执行计划（待审核）
 
+- 数据状态更新（2026-02-27）：
+  - 已确认 `data/H_CHARLS_LH_a.dta` 可用，可提供 `childhealth` 相关变量（如 `rachchlt`）及部分童年健康经历变量。
+  - 已确认该 harmonized Life History 文件不包含 `familystarved`、`nofood`（对应原始问卷 `C4`、`C3_a`），相关原始数据仍在申请中。
+  - 执行策略：先完成不依赖上述缺口变量的阶段；阶段 6 中“童年饥饿/家庭贫困直接控制”子任务延期，待数据获批后补跑并更新文档。
+
 - [ ] 阶段 0：建立复现工程骨架。目标：在根目录新建文件夹 `repro_charls_childhood_risk_asset/`，统一放置代码、结果、日志和文档；产物：`README.md`、`src/`、`output/`、`logs/`、`docs/`、`config/` 基础结构。
 - [ ] 阶段 1：数据清点与可用性核验。目标：核验 `CHARLS 2018` 与 `2014 Life History` 是否齐全、字段是否可读、主键是否可联结；产物：`docs/01_data_inventory.md`（含文件清单、关键字段、缺失风险、替代方案）。
 - [ ] 阶段 2：样本构建与清洗规则落地。目标：按论文口径完成合并、去缺失、去异常，形成分析样本；产物：`src/01_build_sample.*`、`output/sample_flow.csv`、`docs/02_sample_construction.md`（含最终样本量与每步筛选损失）。
@@ -11,6 +16,12 @@
 - [ ] 阶段 8：异质性分析复现（表6-7）。目标：复现年龄与教育异质性（含交互项与对应 IV 列）；产物：`src/07_heterogeneity.*`、`output/tables/table6_reproduced.*`、`output/tables/table7_reproduced.*`、`docs/08_heterogeneity.md`。
 - [ ] 阶段 9：结果汇总与可重复运行封装。目标：提供一键运行脚本与复现偏差说明；产物：`run_all.*`、`docs/09_reproduction_report.md`（逐表对照论文）、`docs/10_limitations_and_gaps.md`。
 - [ ] 阶段 10：最终交付检查。目标：检查路径、代码可运行性、文档完整性、输出可追溯性；产物：根目录下完整复现文件夹与最终交付清单。
+
+## 当前执行顺序（按数据可得性调整）
+
+- [ ] 先执行：阶段 0-5、阶段 7-10（不依赖 `familystarved/nofood` 可先完成主体复现）。
+- [ ] 暂缓执行：阶段 6 中“加入 `familystarved`、`nofood`、童年家庭经济状况直接指标”的子任务。
+- [ ] 数据到位后补跑：阶段 6 缺失子任务 + 受其影响的结果汇总文档（`docs/06_robustness.md`、`docs/09_reproduction_report.md`、`docs/10_limitations_and_gaps.md`）。
 
 ## 阶段验收标准（统一口径）
 
