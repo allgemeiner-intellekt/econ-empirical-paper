@@ -66,3 +66,27 @@
 - 新识别风险：
   - 机制变量 `lntotalasset` 目前采用“个人金融资产口径”近似，可能与论文“总资产口径”存在偏差。
 - 结论：阶段 3 达到计划要求，可进入阶段 4（基准回归复现，表2）。
+
+## 2026-02-27 阶段 4 完成记录
+
+- 验收范围：表 2 基准模型（Logit + OLS）与稳健标准误复现。
+- 执行脚本：`src/03_baseline_models.R`。
+- 产出文件：
+  - `output/tables/table2_reproduced.csv`
+  - `output/tables/table2_reproduced_full.csv`
+  - `output/tables/table2_model_diagnostics.csv`
+  - `output/tables/table2_paper_compare.csv`
+  - `output/tables/table2_ols_sensitivity.csv`
+  - `logs/baseline_models_summary.log`
+  - `docs/04_baseline_results.md`
+- 关键结果（`childhealth`）：
+  - Logit (1)：`-0.0493*`；
+  - Logit (2)：`-0.0304`；
+  - OLS (3)：`-0.0011`；
+  - OLS (4)：`-0.0003`。
+- 复现偏差：
+  - Logit 两列与论文方向和量级接近；
+  - OLS 两列方向一致但不显著，未复现论文显著性。
+- 已探索方案：
+  - 对 OLS 做了样本/口径敏感性（`financial_asset_total>0`、`Risk_Ratio>0`、winsor、窄分母），仍未恢复显著性。
+- 结论：阶段 4 达到计划要求，可进入阶段 5（内生性处理复现，表3）；但需在后续报告中持续标注 OLS 偏差来源未完全定位。

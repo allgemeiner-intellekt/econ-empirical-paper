@@ -1,0 +1,5 @@
+"model_id","dependent_variable","model_type","n","fit_stat","fit_stat_name"
+"(1)","Risk_Dummy","Logit",14687,0.000344908106922226,"McFadden_R2"
+"(2)","Risk_Dummy","Logit",14686,0.0670181333009612,"McFadden_R2"
+"(3)","Risk_Ratio","OLS",14687,3.495520744722e-05,"R2"
+"(4)","Risk_Ratio","OLS",14686,0.0265269358801758,"R2"
